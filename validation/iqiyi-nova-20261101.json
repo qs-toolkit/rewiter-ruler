@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-01",
+  "device": "nova 14 Pro",
+  "bundleName": "com.qiyi.video.hmy",
+  "subscription": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/plugins/iqiyi.plugin",
+  "selectedActions": 16,
+  "domainRules": 3,
+  "responseScriptRules": 13,
+  "actualClientParser": {
+    "identityMatches": 16,
+    "diagnostics": 0
+  },
+  "nativeEngineCompilation": {
+    "domainRules": 3,
+    "scripts": 13,
+    "mitmHosts": 7,
+    "diagnostics": []
+  },
+  "dependencySha256": "a5242876770cd4c151435f687e98bf58dcf75fe8cad9e7f256ec26f019fb7c1b",
+  "downloadHTTPStatus": 200,
+  "checks": {
+    "sourceCacheMatchesPublishedPlugin": true,
+    "allApplicationSelectionStatePreserved": true,
+    "otherSourceDefinitionsPreserved": true,
+    "nodeAndSubscriptionSettingsPreserved": true,
+    "vpnRunning": true,
+    "ownerReady": true,
+    "appliedGenerationMatchesDesired": true
+  },
+  "notes": [
+    "Client storage omits source resource text from loon.json; byte equality was checked against the application pack cache.",
+    "Import restored cached script candidates for three other source groups; source definitions and all application selections were unchanged.",
+    "The 16 existing execution selections and their pins were retained; this import adds their repository origin and update URL.",
+    "No CA changes or app installation performed. This validates source delivery, parsing and selection preservation; real application ad-removal acceptance was not performed."
+  ]
+}

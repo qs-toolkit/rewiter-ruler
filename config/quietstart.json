@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/qs-toolkit/rewiter-ruler",
+  "catalogUrl": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/catalog/index.json",
+  "collection": {
+    "name": "轻启规则合集",
+    "version": "7d67751758c37429",
+    "appCount": 1,
+    "ruleCount": 16,
+    "subscription": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/QuietStart.plugin",
+    "sha256": "72a78fccfa1a07e0b4ffe6bc7f8e44dab238f415751cc7115b343901ecb87a77",
+    "manifest": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/collection/manifest.json",
+    "applicationImportConfig": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/collection/QuietStart.conf"
+  },
+  "importMethod": "MITM → 规则管理 → 新增 → 粘贴 collection/QuietStart.conf 的完整内容 → 导入",
+  "applicationBinding": "按 #!name 自动匹配本机应用；导入后核对 bundleName；不作为全局规则使用。",
+  "updatePolicy": "manual",
+  "subscriptions": [
+    {
+      "name": "爱奇艺",
+      "bundleName": "com.qiyi.video.hmy",
+      "url": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/plugins/iqiyi.plugin"
+    }
+  ]
+}

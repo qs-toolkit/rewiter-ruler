@@ -1,0 +1,32 @@
+#!name=轻启规则合集
+#!desc=轻启·分流器的多应用规则合集；各应用规则由 apps/ 统一构建。
+#!author=qs-toolkit
+#!version=7d67751758c37429
+# Generated collection. Add apps/<id>/rules.json and rebuild to extend this feed.
+# Application membership: collection/manifest.json
+# QuietStart application-scoped batch import: collection/QuietStart.conf
+
+[Rule]
+# > 爱奇艺 | iqiyi | com.qiyi.video.hmy
+DOMAIN-SUFFIX,t7z.cupid.iqiyi.com,REJECT
+DOMAIN,t7z.cupid.iqiyi.com,REJECT
+DOMAIN,t7z.cupid.ptqy.gitv.tv,REJECT
+
+[Script]
+# > 爱奇艺 | iqiyi | com.qiyi.video.hmy
+http-response ^https?://(kjp|t7z)\.cupid\.iqiyi\.com/mixer\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://[\d\.]+/3f1/cards\.iqiyi\.com/(views_home/3\.0/qy_home|waterfall/3\.0/feed)\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://access\.if\.iqiyi\.com/3f1/cards\.iqiyi\.com/(views_category/3\.0/category_home|views_home/3\.0/qy_home|waterfall/3\.0/feed)\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://cards\.iqiyi\.com/(views_home/3\.0/qy_home|waterfall/3\.0/feed)\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://cards\.iqiyi\.com/views_category/3\.0/(category_home|categorylib_content|film_hybrid)\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://cards\.iqiyi\.com/views_plt/3\.0/player_tabs_v2\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://cards\.iqiyi\.com/views_search/3\.0/(hot_query_)?search\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://comment-card\.iqiyi\.com/views_comment/3\.0/long_video_comments\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://iface2\.iqiyi\.com/aggregate/3\.0/getMyMenus\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://iface2\.iqiyi\.com/control/3\.0/init_proxy\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://iface2\.iqiyi\.com/fusion/3\.0/common_switch\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://iface2\.iqiyi\.com/views/3\.0/(bottom_theme|home_top_menu)\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+http-response ^https?://search\.video\.iqiyi\.com/q\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi
+
+[MITM]
+hostname = access.if.iqiyi.com, cards.iqiyi.com, comment-card.iqiyi.com, iface2.iqiyi.com, kjp.cupid.iqiyi.com, search.video.iqiyi.com, t7z.cupid.iqiyi.com

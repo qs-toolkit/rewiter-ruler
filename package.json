@@ -1,0 +1,13 @@
+{
+  "name": "quietstart-rewrite-rules",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "test": "node --test tests/*.test.mjs",
+    "verify:upstream": "node scripts/verify-upstream.mjs"
+  }
+}

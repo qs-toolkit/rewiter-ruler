@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/plugins/iqiyi.plugin

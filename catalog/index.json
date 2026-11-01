@@ -1,0 +1,39 @@
+{
+  "schema": "quietstart-rules/v1",
+  "repository": "qs-toolkit/rewiter-ruler",
+  "collection": {
+    "name": "轻启规则合集",
+    "version": "7d67751758c37429",
+    "appCount": 1,
+    "ruleCount": 16,
+    "subscription": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/QuietStart.plugin",
+    "sha256": "72a78fccfa1a07e0b4ffe6bc7f8e44dab238f415751cc7115b343901ecb87a77",
+    "manifest": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/collection/manifest.json",
+    "applicationImportConfig": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/collection/QuietStart.conf"
+  },
+  "apps": [
+    {
+      "id": "iqiyi",
+      "name": "爱奇艺",
+      "bundleName": "com.qiyi.video.hmy",
+      "version": "2026.11.01.1",
+      "ruleCount": 16,
+      "counts": {
+        "rule": 3,
+        "rewrite": 0,
+        "script": 13
+      },
+      "manifest": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/apps/iqiyi/rules.json",
+      "subscription": "https://raw.githubusercontent.com/qs-toolkit/rewiter-ruler/main/plugins/iqiyi.plugin",
+      "sha256": "6f85342cf66c27247e8a816341f4f7afe8baa92b09034ac43af5a29ec792827f",
+      "dependencies": [
+        {
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+          "sha256": "a5242876770cd4c151435f687e98bf58dcf75fe8cad9e7f256ec26f019fb7c1b",
+          "policy": "external-reference",
+          "note": "保留已选规则的原始脚本 URL 与执行身份；不在此仓库复制或重新授权第三方脚本。"
+        }
+      ]
+    }
+  ]
+}

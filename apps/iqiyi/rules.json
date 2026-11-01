@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "id": "iqiyi",
+  "name": "爱奇艺",
+  "bundleName": "com.qiyi.video.hmy",
+  "version": "2026.11.01.1",
+  "description": "nova 已选规则：3 条域名拒绝、13 条响应脚本。",
+  "mitmHosts": [
+    "kjp.cupid.iqiyi.com",
+    "t7z.cupid.iqiyi.com",
+    "cards.iqiyi.com",
+    "access.if.iqiyi.com",
+    "comment-card.iqiyi.com",
+    "iface2.iqiyi.com",
+    "search.video.iqiyi.com"
+  ],
+  "dependencies": [
+    {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "sha256": "a5242876770cd4c151435f687e98bf58dcf75fe8cad9e7f256ec26f019fb7c1b",
+      "policy": "external-reference",
+      "note": "保留已选规则的原始脚本 URL 与执行身份；不在此仓库复制或重新授权第三方脚本。"
+    }
+  ],
+  "rules": [
+    {
+      "id": "aa4ed90a99353648",
+      "section": "rule",
+      "text": "DOMAIN-SUFFIX,t7z.cupid.iqiyi.com,REJECT",
+      "key": "rule\ndomain-suffix,t7z.cupid.iqiyi.com,reject",
+      "origins": [
+        {
+          "provider": "fmz200",
+          "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/split/partA/iQIYI.lpx",
+          "revision": "414d9c35ed5e3e055e250d355bd3eaf8b10a160b",
+          "line": 24
+        },
+        {
+          "provider": "fmz200",
+          "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partA/iQIYI.sgmodule",
+          "revision": "d43f9ab0958c3caf4fc2673666ccba014dbca83b",
+          "line": 20
+        },
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "id": "699c90feaa907c12",
+      "section": "rule",
+      "text": "DOMAIN,t7z.cupid.iqiyi.com,REJECT",
+      "key": "rule\ndomain,t7z.cupid.iqiyi.com,reject",
+      "origins": [
+        {
+          "provider": "fmz200",
+          "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/split/partA/iQIYI.lpx",
+          "revision": "414d9c35ed5e3e055e250d355bd3eaf8b10a160b",
+          "line": 21
+        },
+        {
+          "provider": "fmz200",
+          "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partA/iQIYI.sgmodule",
+          "revision": "d43f9ab0958c3caf4fc2673666ccba014dbca83b",
+          "line": 17
+        },
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "id": "7863534a025cb03e",
+      "section": "rule",
+      "text": "DOMAIN,t7z.cupid.ptqy.gitv.tv,REJECT",
+      "key": "rule\ndomain,t7z.cupid.ptqy.gitv.tv,reject",
+      "origins": [
+        {
+          "provider": "fmz200",
+          "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/split/partA/iQIYI.lpx",
+          "revision": "414d9c35ed5e3e055e250d355bd3eaf8b10a160b",
+          "line": 22
+        },
+        {
+          "provider": "fmz200",
+          "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partA/iQIYI.sgmodule",
+          "revision": "d43f9ab0958c3caf4fc2673666ccba014dbca83b",
+          "line": 18
+        },
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "id": "6ff33bf76822d1d3",
+      "section": "script",
+      "text": "http-response ^https?://(kjp|t7z)\\.cupid\\.iqiyi\\.com/mixer\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://(kjp|t7z)\\.cupid\\.iqiyi\\.com/mixer\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 92
+        }
+      ]
+    },
+    {
+      "id": "a030a4158e1ed4eb",
+      "section": "script",
+      "text": "http-response ^https?://[\\d\\.]+/3f1/cards\\.iqiyi\\.com/(views_home/3\\.0/qy_home|waterfall/3\\.0/feed)\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://[\\d\\.]+/3f1/cards\\.iqiyi\\.com/(views_home/3\\.0/qy_home|waterfall/3\\.0/feed)\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "id": "c63a0cc9cb5a6ba9",
+      "section": "script",
+      "text": "http-response ^https?://access\\.if\\.iqiyi\\.com/3f1/cards\\.iqiyi\\.com/(views_category/3\\.0/category_home|views_home/3\\.0/qy_home|waterfall/3\\.0/feed)\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://access\\.if\\.iqiyi\\.com/3f1/cards\\.iqiyi\\.com/(views_category/3\\.0/category_home|views_home/3\\.0/qy_home|waterfall/3\\.0/feed)\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 72
+        }
+      ]
+    },
+    {
+      "id": "da56afecc5903368",
+      "section": "script",
+      "text": "http-response ^https?://cards\\.iqiyi\\.com/(views_home/3\\.0/qy_home|waterfall/3\\.0/feed)\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://cards\\.iqiyi\\.com/(views_home/3\\.0/qy_home|waterfall/3\\.0/feed)\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 74
+        }
+      ]
+    },
+    {
+      "id": "ee774cac1cf9026e",
+      "section": "script",
+      "text": "http-response ^https?://cards\\.iqiyi\\.com/views_category/3\\.0/(category_home|categorylib_content|film_hybrid)\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://cards\\.iqiyi\\.com/views_category/3\\.0/(category_home|categorylib_content|film_hybrid)\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 73
+        }
+      ]
+    },
+    {
+      "id": "5ec98968c7e28fb8",
+      "section": "script",
+      "text": "http-response ^https?://cards\\.iqiyi\\.com/views_plt/3\\.0/player_tabs_v2\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://cards\\.iqiyi\\.com/views_plt/3\\.0/player_tabs_v2\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "id": "a3f7ee208064b5e4",
+      "section": "script",
+      "text": "http-response ^https?://cards\\.iqiyi\\.com/views_search/3\\.0/(hot_query_)?search\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://cards\\.iqiyi\\.com/views_search/3\\.0/(hot_query_)?search\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "id": "05ccb7326e0fd2a6",
+      "section": "script",
+      "text": "http-response ^https?://comment-card\\.iqiyi\\.com/views_comment/3\\.0/long_video_comments\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://comment-card\\.iqiyi\\.com/views_comment/3\\.0/long_video_comments\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 80
+        }
+      ]
+    },
+    {
+      "id": "4d281e680e268a7c",
+      "section": "script",
+      "text": "http-response ^https?://iface2\\.iqiyi\\.com/aggregate/3\\.0/getMyMenus\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://iface2\\.iqiyi\\.com/aggregate/3\\.0/getMyMenus\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 82
+        }
+      ]
+    },
+    {
+      "id": "8fdb8e6be5f58811",
+      "section": "script",
+      "text": "http-response ^https?://iface2\\.iqiyi\\.com/control/3\\.0/init_proxy\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://iface2\\.iqiyi\\.com/control/3\\.0/init_proxy\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 84
+        }
+      ]
+    },
+    {
+      "id": "bbdd498f59e30df7",
+      "section": "script",
+      "text": "http-response ^https?://iface2\\.iqiyi\\.com/fusion/3\\.0/common_switch\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://iface2\\.iqiyi\\.com/fusion/3\\.0/common_switch\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 86
+        }
+      ]
+    },
+    {
+      "id": "c7f8c212a382d08a",
+      "section": "script",
+      "text": "http-response ^https?://iface2\\.iqiyi\\.com/views/3\\.0/(bottom_theme|home_top_menu)\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://iface2\\.iqiyi\\.com/views/3\\.0/(bottom_theme|home_top_menu)\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 88
+        }
+      ]
+    },
+    {
+      "id": "eabb654e4deaae68",
+      "section": "script",
+      "text": "http-response ^https?://search\\.video\\.iqiyi\\.com/q\\? max-size=-1, requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js, tag=iqiyi",
+      "key": "script\nhttp-response ^https?://search\\.video\\.iqiyi\\.com/q\\? requires-body=true, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/cntv.js",
+      "origins": [
+        {
+          "provider": "zirawell",
+          "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Rule/Surge/Adblock/App/A/爱奇艺/iqiyi.sgmodule",
+          "revision": "e1f37163b75c9cd05ec82ea77941121bf4beee26",
+          "line": 90
+        }
+      ]
+    }
+  ]
+}
